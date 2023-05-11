@@ -1,0 +1,44 @@
+[
+    {
+        "service_id": 1,
+        "service_name": "General Check-Up",
+        "service_title": "Comprehensive health assessment and physical examination",
+        "service_price": "150",
+        "image_url": "https://media.istockphoto.com/id/1395083172/photo/african-american-female-doctor-checks-patient-girl-in-wheelchair-at-hospital.jpg?b=1&s=170667a&w=0&k=20&c=XOwuCWy6ExB35KOgcJkEI1d8U8lBrOhSmwH7gTzHI08="
+    },
+    {
+        "service_id": 2,
+        "service_name": "Pediatric Care",
+        "service_title": "Specialized medical care for infants, children, and adolescents",
+        "service_price": "120",
+        "image_url": "https://media.istockphoto.com/id/1294678918/photo/caring-female-doctor-support-and-cheer-elderly-man.jpg?b=1&s=170667a&w=0&k=20&c=IaCxyC630IYiUOXW42eWLBvzP75pZ4cqK7D0rShxqH4="
+    },
+    {
+        "service_id": 3,
+        "service_name": "Cardiology",
+        "service_title": "Diagnosis and treatment of heart-related conditions",
+        "service_price": "200",
+        "image_url": "https://media.istockphoto.com/id/1362936837/photo/medical-workers-walking-through-the-corridor.jpg?b=1&s=170667a&w=0&k=20&c=JgEZ9ViQz-Mz9EqufgwPs6TvL1R0McCebhcEwE0ulpw="
+    },
+    {
+        "service_id": 4,
+        "service_name": "Dermatology",
+        "service_title": "Diagnosis and treatment of skin conditions",
+        "service_price": "180",
+        "image_url": "https://media.istockphoto.com/id/1405986129/photo/doctor-physiotherapist-doing-healing-treatment-on-mans-back.jpg?b=1&s=170667a&w=0&k=20&c=tJxaBrsqer2DpfTrEl6bE074Q5adwe-LB4JQnjj6RQw="
+    },
+    {
+        "service_id": 5,
+        "service_name": "Gynecology",
+        "service_title": "Medical care for female reproductive health",
+        "service_price": "220",
+        "image_url": "https://images.unsplash.com/photo-1596354762473-6706bf6d5626?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGRvY3RvcnMlMjBzZXJ2aWNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        "service_id": 6,
+        "service_name": "Nutrition Counseling",
+        "service_title": "Professional guidance on healthy eating and lifestyle habits",
+        "image_url": "https://media.istockphoto.com/id/1394002689/photo/nurse-working-at-the-reception-desk-in-the-private-clinic.jpg?b=1&s=170667a&w=0&k=20&c=JeomyFbnGsk9QZ0c2Xa_wXiarj8njkTiHov5bEJC5-Q=",
+        "service_price": "240"
+    }
+]
