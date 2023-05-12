@@ -27,7 +27,7 @@ const NavigationBar = () => {
         </>
 
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 px-16 pt-5">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -40,7 +40,7 @@ const NavigationBar = () => {
 
                     </ul>
                 </div>
-                <Link to='/'><h1 className='text-secondary font-semibold text-sm'>Doctors Point</h1></Link>
+                <Link to='/'><h1 className='text-cyan-600 font-semibold text-2xl'>Doctors Services</h1></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="gap-5 font-semibold menu-horizontal px-1">
@@ -48,7 +48,7 @@ const NavigationBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Get started</a>
+                <a className="btn btn-outline">Get started</a>
             </div>
         </div>
     );
