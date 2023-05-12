@@ -4,6 +4,8 @@ import Home from "../Pages/Home/Home";
 import Login from "../Shared/Login/Login";
 import Register from "../Shared/Register/Register";
 import DoctorServiceBook from "../Pages/doctorServiceBook/doctorServiceBook";
+import Bookings from "../Pages/Bookings/Bookings";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -26,10 +28,14 @@ const router = createBrowserRouter([
             },
             {
                 path: '/book/:id',
-                element: <DoctorServiceBook></DoctorServiceBook>,
+                element: <PrivateRoute><DoctorServiceBook></DoctorServiceBook></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
 
 
+            },
+            {
+                path: '/bookings',
+                element: <PrivateRoute><Bookings></Bookings></PrivateRoute>
             }
         ]
     }

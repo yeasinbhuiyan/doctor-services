@@ -16,7 +16,7 @@ const NavigationBar = () => {
             <li><Link>Home</Link></li>
             <li><Link>About</Link></li>
             {user ? <>
-                {/* <li><Link to='/bookingsTable'>Bookings</Link></li> */}
+                <li><Link to='/bookings'>Bookings</Link></li>
                 <li>   <button onClick={logOut}>Log out</button></li>
             </> :
 
