@@ -1,20 +1,44 @@
 import { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Login = () => {
     const { loginUser } = useContext(AuthContext)
+    const location = useLocation()
+    const navigate = useNavigate()
     const handleLogin = (event) => {
         event.preventDefault()
         const form = event.target
         const name = form.name.value
         const email = form.email.value
         const password = form.password.value
+
+        const from = location.state?.from?.pathname || '/'
+
         loginUser(email, password)
             .then(result => {
                 const user = result.user
                 console.log(user)
+                navigate(from)
 
+                const loggedUser = {
+                    email: user.email
+                }
+                fetch('http://localhost:5000/jwt', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(loggedUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        if (data.token) {
+
+                            localStorage.setItem('access-token',data.token)
+                        }
+                    })
             })
             .catch(error => {
                 console.log(error.message)
@@ -51,7 +75,7 @@ const Login = () => {
                         </div>
 
                         <div>
-                            <p className='text-sm font-semibold mt-5'>Have an account?  <Link className='text-orange-500 font-bold' to='/register'>Sign In</Link></p>
+                            <p className='text-sm font-semibold mt-5'>Have an account?  <Link className='text-orange-500 font-bold' to='/register' state={location.state}>Sign In</Link></p>
                         </div>
                     </form>
                 </div>

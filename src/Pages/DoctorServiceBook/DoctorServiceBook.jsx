@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 const DoctorServiceBook = () => {
 
@@ -15,7 +16,7 @@ const DoctorServiceBook = () => {
         const form = event.target
         const name = form.name.value
         const date = form.date.value
-        const email = form.email.value 
+        const email = form.email.value
 
         const serviceDetails = {
             email,
@@ -35,7 +36,15 @@ const DoctorServiceBook = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                alert('Your Order Successfully Bookmark')
+                if (data.insertedId) {
+                    Swal.fire(
+                        'Service Confirm!',
+                        'Your Order Successfully Bookmark!',
+                        'success'
+                    )
+                }
+
+                // alert('Your Order Successfully Bookmark')
             })
 
 

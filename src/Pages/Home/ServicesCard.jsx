@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ServicesCard = ({ service }) => {
     const {  service_name, service_price, image_url, _id } = service
     return (
-        <div className="card w-96 glass">
+        <div className="card w-full glass">
             <figure><img src={image_url} alt="car!" /></figure>
             <div className="card-body">
                 <h2 className="card-title font-bold text-2xl">{service_name}</h2>
